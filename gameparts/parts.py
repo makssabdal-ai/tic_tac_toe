@@ -2,8 +2,12 @@
 class Board:
     # Инициализировать игровое поле - список списков с пробелами.
     # Пробелы - это пустые клетки.
+    field_size = 3
+
     def __init__(self):
-        self.board = [[' ' for _ in range(3)] for _ in range(3)]
+        self.board = [
+            [' ' for _ in range(self.field_size)]
+            for _ in range(self.field_size)]
 
     # Метод, который обрабатывает ходы игроков.
     def make_move(self, row, col, player):
@@ -14,3 +18,7 @@ class Board:
         for row in self.board:
             print('|'.join(row))
             print('-' * 5)
+
+    def __str__(self):
+        return ('Объект игрового поля размером '
+                f'{self.field_size}x{self.field_size}')
