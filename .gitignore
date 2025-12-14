@@ -1,1 +1,3 @@
 venv/
+tic_tac_toe/__pycache__/
+tic_tac_toe/gameparts/__pycache__/
